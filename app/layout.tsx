@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { MenuFooter } from '@/components/MenuFooter';
+import Link from 'next/link';
+import ShakingPhone from '@/components/ShakingPhone';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,17 +31,27 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          {/* <nav>
+            <Link href="/">About</Link>
+            <Link href="/cabine">Cabine</Link>
+            <Link href="/fence">Fence</Link>
+            <Link href="/canopy">Canopy</Link>
+            <Link href="/partition">Partition</Link>
+          </nav> */}
+        </header>
+        <main>{children}</main>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <footer className="flex  items-center justify-center mt-10 mb-16 ">
+            {/* <ShakingPhone /> */}
+            <MenuFooter />
+          </footer>
         </ThemeProvider>
-        <footer>
-          <MenuFooter />
-        </footer>
       </body>
     </html>
   );

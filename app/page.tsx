@@ -1,6 +1,4 @@
 // import Image from 'next/image';
-
-import { ModeToggle } from '@/components/ModeToggle';
 import { TextEffect } from '@/components/motion-primitives/text-effect';
 
 export default function Home() {
@@ -15,7 +13,6 @@ export default function Home() {
       <TextEffect per="char" preset="fade">
         Animate your ideas with motion-primitives
       </TextEffect>
-      <ModeToggle />
     </div>
   );
 }
