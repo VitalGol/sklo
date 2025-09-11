@@ -13,18 +13,18 @@ import {
 
 export const Calculator = ({}) => {
   const [value, setValue] = useState(0);
-  console.log("----", (1234567.89).toLocaleString("uk-UA"));
+  // console.log("----", (1234567.89).toLocaleString("uk-UA"));
   // choice
   useEffect(() => {
-    const number = 1234567.89;
-    const formatted = new Intl.NumberFormat("uk-UA").format(number);
+    // const number = 1234567.89;
+    // const formatted = new Intl.NumberFormat("uk-UA").format(number);
     // setValue(formatted);
     setValue(2088);
   }, []);
   return (
     <div className="flex flex-col justify-center items-center border-2 border-blue-800  ">
       <p className="text-2xl mb-6 ">
-        Цiна кабiни
+        Цiна
         <AnimatedNumber
           className="inline-flex items-center font-mono text-2xl font-semibold text-zinc-800 dark:text-zinc-50 mx-2"
           springOptions={{

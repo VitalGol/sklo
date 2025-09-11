@@ -1,22 +1,14 @@
 "use client";
-// import { Calculator } from "@/components/Calculator";
-import { cabine } from "@/data/data";
 import { AnimatedBackground } from "@/components/motion-primitives/animated-background";
+import Image from "next/image";
+import { showerDoors } from "@/data/data";
 import { useRouter } from "next/navigation";
 
-import Image from "next/image";
-import { TextEffect } from "@/components/motion-primitives/text-effect";
-
-const Cabine = () => {
+const ShowerDoors = () => {
   const router = useRouter();
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <h1 className="text-2xl font-semibold">
-        <TextEffect per="char" preset="fade">
-          Скляні душові кабіни
-        </TextEffect>
-      </h1>
-
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="text-2xl font-semibold">Скляні душові двері</h1>
       <div className="grid grid-cols-2 p-10 md:grid-cols-3">
         <AnimatedBackground
           className="rounded-lg bg-zinc-100 dark:bg-zinc-800"
@@ -27,12 +19,12 @@ const Cabine = () => {
           }}
           enableHover
         >
-          {cabine.map((item, index) => (
+          {showerDoors.map((item, index) => (
             <div
               key={index}
               data-id={`card-${index}`}
               onClick={() => {
-                router.push(`/cabine/${item.id}`);
+                router.push(`/cabine/cabine-doors/${item.id}`);
               }}
             >
               <div className="flex select-none flex-col justify-center items-center space-y-1 p-4 hover:cursor-pointer">
@@ -58,4 +50,4 @@ const Cabine = () => {
   );
 };
 
-export default Cabine;
+export default ShowerDoors;

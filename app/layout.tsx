@@ -30,12 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <div className="w-7xl mx-auto  flex flex-col justify-between   h-dvh ">
-          <header className="flex  justify-start items-center    text-center border-2 border-blue-400">
+          <header className="flex  justify-start items-center    text-center border-2 border-blue-400 sticky top-0 bg-white dark:bg-slate-900 z-50 ">
             <div className=" flex max-w-sm items-center gap-x-4  bg-white py-2  dark:bg-slate-800  ">
               <Codesandbox className="h-10 w-10 text-neutral-600 dark:text-neutral-300 aspect-square rounded-full bg-gray-200 dark:bg-neutral-800" />
               <div>
