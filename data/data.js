@@ -494,3 +494,26 @@ export const showerPartitions = [
     description: "Enhances modal presentations.",
   },
 ];
+export const showerCurtains = [
+  {
+    id: 0,
+    title: "CAPRI slim перегородка для душу",
+    src: "/curtains/curtain.jpg",
+    alt: "Picture of the author",
+    description: "Enhances modal presentations.",
+  },
+  {
+    id: 1,
+    title: "CAPRI душова шторка на ванну",
+    src: "/curtains/curtain.jpg",
+    alt: "Picture of the author",
+    description: "Enhances modal presentations.",
+  },
+  {
+    id: 2,
+    title: "LEVERK душова шторка на ванну",
+    src: "/curtains/curtain.jpg",
+    alt: "Picture of the author",
+    description: "Enhances modal presentations.",
+  },
+];
